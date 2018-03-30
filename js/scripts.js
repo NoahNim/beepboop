@@ -12,6 +12,9 @@ function beepBoop(num){
     } else if (result[i]  % 3 == 0) {
       result[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
     }
+    else {
+      result[i] = "";
+    }
   }
   return result;
 }
