@@ -1,23 +1,25 @@
 // Business logic
+var result = "";
 
 // Function to take input and beep boop it
 function beepBoop(num){
-  var result = String(num).split('');
-
-  for (var i in result) {
-    if (result[i] == 0) {
-      result[i] = "beep";
-    } else if (result[i] == 1) {
-      result[i] = "boop";
-    } else if (result[i]  % 3 == 0) {
-      result[i] = "I'm sorry, Dave. I'm afraid I can't do that.";
+  for (var i = 0; i <= num; i++) {
+    if (i % 3 === 0 && i != 0) {
+      result = result.concat("I'm sorry, Dave. I'm afraid I can't do that. ");
+      continue;
+    } else if (i.toString().includes("1")){
+      result = result.concat("Boop! ");
+      continue;
+    } else if (i.toString().includes("0")) {
+      result = result.concat("Beep! ");
+      continue;
     }
-    else {
-      result[i] = "";
+    result += i.toString();
+    result = result.concat(". ");
     }
-  }
   return result;
 }
+
 
 
 $("document").ready(function(event){
