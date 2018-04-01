@@ -6,13 +6,10 @@ function beepBoop(num){
   for (var i = 0; i <= num; i++) {
     if (i % 3 === 0 && i != 0) {
       result = result.concat("I'm sorry, Dave. I'm afraid I can't do that. ");
-      continue;
     } else if (i.toString().includes("1")){
       result = result.concat("Boop! ");
-      continue;
     } else if (i.toString().includes("0")) {
       result = result.concat("Beep! ");
-      continue;
     }
     result += i.toString();
     result = result.concat(". ");
