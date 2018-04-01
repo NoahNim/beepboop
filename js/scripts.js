@@ -29,8 +29,11 @@ $("document").ready(function(event){
     var beepBoopResult = beepBoop(userInput);
     console.log(beepBoopResult);
 
-    $("#result").show();
-    $("#result").append(beepBoopResult);
-
+    if ($.isNumeric(userInput)) {
+      $("#result").show();
+      $("#result").append(beepBoopResult);
+    } else {
+      alert("Please put in numbers!")
+    }
   })
 })

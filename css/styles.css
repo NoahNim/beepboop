@@ -1,7 +1,17 @@
 .container {
   text-align: center;
+  margin-top: 200px;
+}
+
+.header{
+  text-align: center;
+  margin-top: 100px;
 }
 
 #result {
   display: none;
+}
+
+body {
+  background-color: #cee1ff;
 }
